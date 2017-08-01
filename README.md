@@ -1,2 +1,2 @@
-# TCC - Arquitetura de Software Distribuídos - PUC-MG
+# TCC - Arquitetura de Software Distribuído - PUC-MG
 Em Andamento
