@@ -1,2 +1,2 @@
-# asd
-Trabalho de conclusão de curso Arquitetura de Software Distribuído
+# TCC Pós Graduação de Arquitetura de Software Distribuídos - PUC-MG
+Em Andamento
