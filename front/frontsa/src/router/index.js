@@ -22,8 +22,7 @@ let routes = [
   {
     path: '/painel',
     name: 'Painel',
-    component: Painel,
-    meta: { middlewareAuth: true }
+    component: Painel
   },
   {
     path: '/login',

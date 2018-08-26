@@ -14,13 +14,30 @@ class AuthController extends Controller
 
 public function register()
 {
-    User::create([
+    $user = User::create([
         'name' => request('name'),
         'email' => request('email'),
-        'password' => bcrypt(request('password'))
+        'password' => bcrypt(request('password')),
+        'curso' => request('curso'),
+        'endereco' => request('endereco'),
+        'numero' => request('numero'),
+        'complemento' => request('complemento'),
+        'estado' => request('estado'),
+        'cidade' => request('cidade'),
+        'bairro' => request('bairro')
     ]);
 
-    return response()->json(['status' => 201]);
+    if (!$user) {
+        return response()->json([
+            'message' => 'Não foi possível cadastrar o aluno.',
+            'status' => 422
+        ], 422);
+    }
+
+    return response()->json([
+        'message' => 'Cadastro efetuado com sucesso, entre com o login.',
+        'status' => 201
+    ], 201);
 }
 
 public function login()
@@ -101,6 +118,11 @@ public function logout()
     $accessToken->revoke();
 
     return response()->json(['status' => 200]);
+}
+
+public function getUser()
+{
+    return auth()->user();
 }
 
 }

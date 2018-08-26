@@ -4,7 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Auth from './router/auth'
+import Api from './api.js'
 
+window.api = new Api()
 window.auth = new Auth()
 window.Event = new Vue()
 Vue.config.productionTip = false
