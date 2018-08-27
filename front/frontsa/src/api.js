@@ -2,8 +2,6 @@ import Auth from './router/auth'
 import axios from 'axios'
 
 class Api {
-  constructor () {}
-
   call (requestType, url, data = null) {
     return new Promise((resolve, reject) => {
       axios[requestType](url, data)
