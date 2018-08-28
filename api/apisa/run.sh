@@ -13,10 +13,14 @@ echo Gerar chave
 sudo docker exec -it apisa-app php artisan key:generate
 
 echo Make migrations
+sudo docker exec -it apisa-app php artisan migrate:install
 sudo docker exec -it apisa-app php artisan migrate
 
 echo Make seeds
 sudo docker exec -it apisa-app php artisan db:seed
+
+echo Instalar Passport
+sudo docker exec -it apisa-app php artisan passport:install
 
 echo Informação dos novos contentores
 sudo docker ps -a 
